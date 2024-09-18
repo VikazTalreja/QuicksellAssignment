@@ -1,0 +1,50 @@
+/* App.css */
+.header {
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.App {
+  background-color: #f4f5f7;
+}
+
+.display-button {
+  position: relative;
+  display: inline-block;
+}
+
+.display-button button {
+  background-color: black;
+  align-items: center;
+  color: white;
+  border: none;
+  padding: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu .controls {
+  display: flex;
+  flex-direction: column; /* Default to column direction */
+  gap: 1rem;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .dropdown-menu .controls {
+    flex-direction: column; /* Change to row direction on larger screens */
+  }
+}

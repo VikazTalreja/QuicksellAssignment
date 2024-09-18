@@ -1,0 +1,86 @@
+/* KanbanBoard.css */
+.kanban-board {
+    display: flex;
+    
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.kanban-column {
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: 265px;
+    flex-shrink: 0;
+}
+
+.kanban-column h2 {
+    font-size: 1rem;
+}
+
+.tickets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.kanban-header h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: normal; 
+}
+
+.kanban-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.profile-picture {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    background-color: black;
+    display: inline-block;
+    text-align: center; 
+    line-height: 25px;
+    color: white; 
+}
+
+.online-indicator-online {
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.online-indicator-offline {
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #636363;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        overflow-x: hidden;
+    }
+
+    .kanban-column {
+        width: 95%; /* Make columns full width on smaller screens */
+    }
+
+}

@@ -1,0 +1,100 @@
+/* TicketCard.css */
+.ticket-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 90px;
+  }
+  
+  /* Title and paragraph styles */
+  .ticket-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .ticket-card p {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Profile picture and indicator styles */
+  .profile-container {
+    position: relative; /* Allows the online indicator to be positioned relative to this container */
+    display: inline-block;
+    width: 25px; /* Profile picture width */
+    height: 25px; /* Profile picture height */
+    border-radius: 50%; /* Make it a circle */
+    background-color: black; /* Background color for the profile picture */
+  }
+  
+  .online-indicator-online {
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  .online-indicator-offline {
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background-color: #636363;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  .profile-picture {
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    background-color: black;
+    display: inline-block;
+    text-align: center; 
+    line-height: 25px;
+    color: white; 
+  }
+  
+  /* Ticket title style */
+  .ticket-title {
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal; 
+    max-width: 100%; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  
+  /* Tags container style */
+  .tags-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  /* Tag item style */
+  .tag-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.2);
+    border-radius: 6px;
+    margin-top: 3px;
+    margin-left: 5px;
+    padding: 3px;
+  }
+  
+  /* Responsive styles for mobile devices */
+  @media (max-width: 768px) {
+    .tags-container {
+      flex-direction: column; /* Stack tags vertically on mobile screens */
+      gap: 0.5rem; /* Add some spacing between tags */
+    }
+  }
+  
