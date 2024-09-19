@@ -93,8 +93,12 @@
   /* Responsive styles for mobile devices */
   @media (max-width: 768px) {
     .tags-container {
-      flex-direction: column; /* Stack tags vertically on mobile screens */
+      flex-direction: row; /* Stack tags vertically on mobile screens */
       gap: 0.5rem; /* Add some spacing between tags */
+    
     }
+    .ticket-card {
+        height: 60px;
+      }
   }
   

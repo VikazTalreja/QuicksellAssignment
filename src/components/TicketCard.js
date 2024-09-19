@@ -8,16 +8,16 @@ const TicketCard = ({ ticket , groupBy }) => {
 
   const getIconForTicket = (ticket) => {
     if (ticket.status === 'Done' && ticket.priority == '4') {
-      return priorityIcons[5]; // Ensure that priorityIcons[6] is defined
+      return priorityIcons[5]; 
     } else {
-      return priorityIcons[ticket.priority] || null; // Ensure ticket.priority is a valid key
+      return priorityIcons[ticket.priority] || null; 
     }
   };
   
   const formatUserName = (group) => {
     const names = group.split(' ');
-    const initials = names.map(n => n[0]).join('').toUpperCase(); // Get initials
-    return `${initials}`; // Format as "Full Name (Initials)"
+    const initials = names.map(n => n[0]).join('').toUpperCase(); 
+    return `${initials}`; 
   };
 
   return (
@@ -48,7 +48,7 @@ const TicketCard = ({ ticket , groupBy }) => {
 )}
         </div>
         <div style={{
-           fontSize: '14px',
+           fontSize: '12px',
            justifyContent:'center',
            alignItems: 'center'
            }}>
@@ -60,9 +60,8 @@ const TicketCard = ({ ticket , groupBy }) => {
   }}>
     {StatusIcons[ticket.status]}
   </span>
-)}
-
-           {ticket.title.length > 50 ? `${ticket.title.substring(0, 50)}...` : ticket.title}
+)}      
+{ticket.title.length > 50 ? `${ticket.title.substring(0, 50)}...` : ticket.title}
         </div>
         <div style={{
           display:'flex',
@@ -103,9 +102,7 @@ const TicketCard = ({ ticket , groupBy }) => {
     </div>
   ))}
 </div>
-
         </div>
-
       </div>
       </div>
   );

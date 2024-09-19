@@ -62,21 +62,18 @@ const App = () => {
       const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
       const data = await response.json();
       
-      // Destructure the data object to get tickets and users
       const { tickets, users } = data;
   
-      // Map over the tickets and add user information
       const ticketsWithUsers = tickets.map(ticket => {
         const user = users.find(user => user.id === ticket.userId);
   
         return {
           ...ticket,
-          user: user ? user.name : 'Unknown', // User's name
-          available: user ? user.available : false // User's availability
+          user: user ? user.name : 'Unknown',
+          available: user ? user.available : false 
         };
       });
   
-      // Set the state with the updated tickets and users
       setTickets(ticketsWithUsers);
       setUsers(users);
     } catch (error) {
@@ -168,7 +165,7 @@ const App = () => {
         cursor: 'pointer',
         padding: '5px',
         margin: '0',
-        boxShadow: '0 3px 4px rgba(0, 0, 0, 0.3)' // Add box shadow here
+        boxShadow: '0 3px 4px rgba(0, 0, 0, 0.3)'
       }}>
         <Display style={{ height: '15px', marginRight: '4px' }} />
         <span style={{
@@ -185,7 +182,7 @@ const App = () => {
             width:'250px',
             top:'25px',
             borderRadius: '5px',
-            boxShadow: '0 3px 4px rgba(0, 0, 0, 0.3)' // Add box shadow here
+            boxShadow: '0 3px 4px rgba(0, 0, 0, 0.3)' 
    
             }}>
             <div className="controls">
@@ -208,8 +205,8 @@ const App = () => {
         width:'120px',
         }}
         onChange={(event) => {
-          handleGroupBy(event); // Call your handler
-          console.log('groupby:', event.target.value); // Log the new value
+          handleGroupBy(event); 
+          console.log('groupby:', event.target.value); 
         }}
       
          value={groupBy}>

@@ -1,7 +1,6 @@
 /* KanbanBoard.css */
 .kanban-board {
     display: flex;
-    
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
@@ -83,4 +82,7 @@
         width: 95%; /* Make columns full width on smaller screens */
     }
 
+    .tickets-container{
+        flex-direction: column;
+    }
 }

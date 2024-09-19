@@ -38,13 +38,12 @@
 
 .dropdown-menu .controls {
   display: flex;
-  flex-direction: column; /* Default to column direction */
+  flex-direction: column; 
   gap: 1rem;
 }
 
-/* Media query for larger screens */
 @media (min-width: 768px) {
   .dropdown-menu .controls {
-    flex-direction: column; /* Change to row direction on larger screens */
+    flex-direction: column; 
   }
 }

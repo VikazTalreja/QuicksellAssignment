@@ -18,8 +18,8 @@ const priorityLabels = {
 const KanbanBoard = ({ tickets, groupBy }) => {
   const groupTitles = {
     status: ['Backlog','Todo', 'In progress','Done','Cancelled'],
-    priority: Object.keys(priorityLabels), // Use numerical keys to get labels
-    user: Object.keys(tickets), // Dynamic based on user names
+    priority: Object.keys(priorityLabels), 
+    user: Object.keys(tickets), 
   };
     const getPriorityLabel = (priority) => priorityLabels[priority] || 'Unknown';
 
