@@ -3,9 +3,10 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem ;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 90px;
+    height: 80px;
+    position: relative;
   }
   
   /* Title and paragraph styles */
@@ -76,7 +77,7 @@
   .tags-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
   }
   
   /* Tag item style */
@@ -98,7 +99,8 @@
     
     }
     .ticket-card {
-        height: 60px;
+        height: 70px;
+        padding: 1rem 1rem 1rem 1rem ;
       }
   }
   

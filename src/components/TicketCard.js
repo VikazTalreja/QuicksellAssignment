@@ -26,6 +26,7 @@ const TicketCard = ({ ticket , groupBy }) => {
         display:'flex',
         flexDirection:'column',
         width:'100%',
+        height:'100%',
         padding:'5',
       }}>
         <div style={{
@@ -66,7 +67,9 @@ const TicketCard = ({ ticket , groupBy }) => {
         <div style={{
           display:'flex',
           flexDirection:'row',
-          
+          position:'absolute',
+          bottom:'4px'
+         
         }}>
         {groupBy != "priority" && (
          <span style={{
